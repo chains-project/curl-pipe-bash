@@ -39,3 +39,7 @@ ALLOW=example.org tests/check_netns.sh
 ```
 
 Requires `bwrap`, `slirp4netns`, `iproute2`, `curl`.
+
+## License
+
+MIT, see `LICENSE`.
