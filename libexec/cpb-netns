@@ -1,0 +1,6 @@
+#!/bin/sh
+# cpb-netns: run a command as mapped root in a fresh user+network namespace.
+# Installed root-owned at /usr/local/libexec/cpb-netns; the AppArmor profile
+# apparmor/cpb-netns grants it the `userns` permission that Ubuntu withholds
+# from unprivileged processes. It grants nothing beyond stock Linux userns.
+exec /usr/bin/unshare --user --map-root-user --net -- "$@"

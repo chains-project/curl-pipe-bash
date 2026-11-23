@@ -1,0 +1,9 @@
+# AppArmor profile for cpb's network-namespace helper (see libexec/cpb-netns).
+abi <abi/4.0>,
+include <tunables/global>
+
+profile cpb-netns /usr/local/libexec/cpb-netns flags=(unconfined) {
+  userns,
+
+  include if exists <local/cpb-netns>
+}
